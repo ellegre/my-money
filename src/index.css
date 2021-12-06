@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Black.woff') format('woff'),
+        url('./fonts/Satoshi-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;                   
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;                            
+  }
+}
+
+/* base styles */
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  font-size: 1.1em;
+}
+ul, li, p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+
+/* background */
+.bg-gradient {
+  @apply bg-gradient-to-tr from-mint-dark via-mint-middle to-mint text-white;
+}
+
+/* text */
+.section-title {
+  @apply text-gray font-bold text-xl md:text-3xl mb-6;
+}
+
+ /* form elements */
+.input {
+  @apply w-full text-gray border-2 border-gray px-3 py-2 mb-3 rounded-md shadow-md 
+  border-opacity-75 focus:outline-none focus:border-orange; 
+}
+
+/* ui elements */
+.btn {
+  @apply px-4 py-2 bg-orange font-medium text-gray tracking-wide 
+  rounded-lg hover:text-white focus:outline-none focus:ring-2 focus:ring-gray;
+}
